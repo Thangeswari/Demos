@@ -1,0 +1,41 @@
+<!--.AUTHOR
+//   Thangu
+//.WEBSITE
+//   https://www.thangu.com
+//.CONTACT
+//   If you need any modifications to the features, contact https://www.thangu.com/contact or spthangu@gmail.com
+//.DATE
+//    2021
+//.FUNCTIONALITY
+//   Calculate weight on Moon
+//.DESCRIPTION
+//   Calculate weight on Moon
+//.LIMITS
+//   None
+//
+-->
+
+<!DOCTYPE html>
+<html>
+<title>Your Weight On Moon</title>
+<body>
+
+<h2>Your Weight On Moon</h2>
+<p>Type your Earth weight In Kilograms:</p>
+
+<p>
+  <label>Earth Weight (Kgs)</label>
+  <input id="inputThangu" type="number" placeholder="Earth Weight" oninput="weightConverter(this.value)" onchange="weightConverter(this.value)">
+</p>
+<p>Weight on Moon: <span id="outputKilograms"></span></p>
+
+<b>FEEL LIGHT ON EARTH AS YOU FIND YOUR WEIGHT ON MOON</b>
+
+<script>
+function weightConverter(valNum) {
+  document.getElementById("outputKilograms").innerHTML=valNum/9.81 * 1.622;
+}
+</script>
+
+</body>
+</html>
